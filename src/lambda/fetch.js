@@ -4,6 +4,8 @@ import config from "../../config";
 const FIRST_LOAD_COUNT = 10;
 
 exports.handler = function(event, context, callback) {
+  // Unplash is a public API to fetch images with the avility to filter/search by specific term. A
+  // user account is needed to obtain an access token for a specific application.
   const apiRoot = "https://api.unsplash.com";
   const accessKey = process.env.ACCESS_KEY || config.accessKey;
 
