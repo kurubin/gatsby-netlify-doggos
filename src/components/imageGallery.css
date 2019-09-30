@@ -5,7 +5,7 @@
   grid-auto-rows: minmax(50px, auto);
 }
 
-.image-grid .grid-imem:nth-child(5n) {
+.image-grid .grid-item:nth-child(5n) {
   grid-column-end: span 2;
 }
 
