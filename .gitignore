@@ -1,3 +1,6 @@
+# Local execution access key
+config.js
+
 # Logs
 logs
 *.log
