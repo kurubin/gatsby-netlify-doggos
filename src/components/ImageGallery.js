@@ -6,7 +6,7 @@ import "./imageGallery.css";
 const useInfiniteImages = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const endpoint = "ENDPOINT HERE WHEN AVAILABLE";
+  const endpoint = "/.netlify/functions/fetch";
   const fetchImages = () => {
     axios(endpoint).then((res) => {
       setImages(images => [...images, ...(res.data.images || [])]);

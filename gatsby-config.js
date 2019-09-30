@@ -1,9 +1,20 @@
+let proxy = require("http-proxy-middleware");
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby doggo example`,
     description: `Example app setup for Gatsby build and fetching via Netlify functions. Following article in scotch.io by William Imoh.
     (https://scotch.io/tutorials/build-an-infinite-scroll-image-gallery-with-gatsby-and-netlify-functions)`,
     author: `kurubin`,
+  },
+  developMiddleware : (app) => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: { "/.netlify/functions/": "" }
+      })
+    );
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
