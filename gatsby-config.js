@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby doggo example`,
+    description: `Example app setup for Gatsby build and fetching via Netlify functions. Following article in scotch.io by William Imoh.
+    (https://scotch.io/tutorials/build-an-infinite-scroll-image-gallery-with-gatsby-and-netlify-functions)`,
+    author: `kurubin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
