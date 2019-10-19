@@ -8,11 +8,12 @@ const useInfiniteImages = () => {
   const [loading, setLoading] = useState(true);
   const endpoint = "/.netlify/functions/fetch";
   const fetchImages = () => {
-    axios(endpoint).then((res) => {
-      setImages(images => [...images, ...(res.data.images || [])]);
-      setLoading(false);
-    })
-    .catch(e => console.error(`Error fetching images: ${e}`));
+    axios(endpoint)
+      .then(res => {
+        setImages(images => [...images, ...(res.data.images || [])]);
+        setLoading(false);
+      })
+      .catch(e => console.error(`Error fetching images: ${e}`));
   };
 
   useEffect(() => {
@@ -33,23 +34,27 @@ const ImageGallery = () => {
       loader={
         <p style={{ textAlign: "center", marginTop: "1%" }}>
           Loading more doggos...
-          <span role="img" aria-label="Dog">🐕</span>
-          <span role="img" aria-label="Dog">🐕</span>
+          <span role="img" aria-label="Dog">
+            🐕
+          </span>
+          <span role="img" aria-label="Dog">
+            🐕
+          </span>
         </p>
       }
     >
       <div className="image-grid">
-        { !loading ? (
-          images.map(image => (
-            <div className="grid-item" key={image.id}>
-              <img
-                alt={image.alt_description}
-                className="image"
-                src={image.urls.regular}
-              />
-            </div>
-          ))
-        ) : null}
+        {!loading
+          ? images.map(image => (
+              <div className="grid-item" key={image.id}>
+                <img
+                  alt={image.alt_description}
+                  className="image"
+                  src={image.urls.regular}
+                />
+              </div>
+            ))
+          : null}
       </div>
     </InifiniteScroll>
   );

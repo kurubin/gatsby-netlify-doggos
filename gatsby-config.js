@@ -7,12 +7,12 @@ module.exports = {
     (https://scotch.io/tutorials/build-an-infinite-scroll-image-gallery-with-gatsby-and-netlify-functions)`,
     author: `kurubin`,
   },
-  developMiddleware : (app) => {
+  developMiddleware: app => {
     app.use(
       "/.netlify/functions/",
       proxy({
         target: "http://localhost:9000",
-        pathRewrite: { "/.netlify/functions/": "" }
+        pathRewrite: { "/.netlify/functions/": "" },
       })
     );
   },
@@ -43,4 +43,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

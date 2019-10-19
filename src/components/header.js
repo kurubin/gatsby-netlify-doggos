@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -16,11 +16,7 @@ const Header = ({ siteTitle }) => (
       </div>
       <div className="navbar-end" style={{ marginRight: "3em" }}>
         <div className="navbar-item">
-          <Link
-            className="has-text-white"
-            style={{ padding: "10px" }}
-            to="/"
-          >
+          <Link className="has-text-white" style={{ padding: "10px" }} to="/">
             Home
           </Link>
           <Link
@@ -34,14 +30,14 @@ const Header = ({ siteTitle }) => (
       </div>
     </nav>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
