@@ -31,5 +31,5 @@ Back end consuming three image collections of dogs offered by [Unsplash](https:/
 
 2.  **Deployment to Netlify.**
 
-    You can use Netlify to deploy the site from your Git repository. Find the url of the code contained in this repo here: <ADD SITE URL WHEN DEPLOYED>
+    You can use Netlify to deploy the site from your Git repository. Find the url of the code contained in this repo here: https://confident-wing-439a07.netlify.com/
     
